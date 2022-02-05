@@ -1,10 +1,9 @@
-import { getAllByAltText } from "@testing-library/react";
 import "./app.css";
-import Habit from "./components/habit";
+import Habits from "./components/habits";
 import "@fortawesome/fontawesome-free/js/all.js";
 
 function App() {
-  return <Habit />;
+  return <Habits />;
 }
 
 export default App;
