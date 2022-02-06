@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Habit extends Component {
-  // 03. 함수 호출 시 부모 컴포넌트에서 전달받은 함수 호출 (전달받은 prop 를 인자로 보냄)
+  // 04. 함수 호출 시 Habit 컴포넌트에서 전달받은 함수 호출 (전달받은 prop 를 인자로 보냄)
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   };
@@ -18,7 +18,8 @@ class Habit extends Component {
         <i className="fas fa-trash"></i>
     </button> */
 
-  // 02. 버튼 클릭 시 현재 클래스의 함수 호출
+  // 03. 버튼 클릭 시 현재 클래스의 멤버함수 호출
+  // 멤버함수는 부모 컴포넌트에서 전달받은 함수를 호출함
   render() {
     const { name, count } = this.props.habit;
     return (
