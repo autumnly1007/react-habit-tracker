@@ -1,6 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-class HabitAddForm extends Component {
+/**
+ * PureComponent
+ * 렌더링 전과 후의 state 와 props 를 얕게 비교함
+ * state, props 가 변경되지 않으면 리렌더링되지 않음
+ */
+class HabitAddForm extends PureComponent {
   formRef = React.createRef();
   inputRef = React.createRef();
   onSubmit = (event) => {

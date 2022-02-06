@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 
+// PureComponent 를 상속하지 않는 이유
+// => habit 오브젝트 안에 있는 count 만 변하기 때문에 리렌더링되지 않음(참조값은 그대로)
 class Habit extends Component {
   // 04. 함수 호출 시 Habit 컴포넌트에서 전달받은 함수 호출 (전달받은 prop 를 인자로 보냄)
+  // 해당 함수는 App 컴포넌트의 멤버함수를 가르키고 있음
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   };
